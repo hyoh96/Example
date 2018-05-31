@@ -26,19 +26,14 @@ public:
         cout << "(" << getX() << ", " << getY() << ", "<< getZ() << ")" << endl;
     }
 
-   ThreeDPoint operator+(ThreeDPoint& v2);
+   ThreeDPoint operator+(ThreeDPoint &v2) {
+    int x = this->getX() + v2.getX();
+    int y = this->getY() + v2.getY();
+    int z = this->getZ() + v2.getZ();
+
+    return ThreeDPoint(x, y, z);
+  }
 };
-
-
-ThreeDPoint& operator+(ThreeDPoint& v2) {
-    ThreeDPoint v;
-    v.setX(getX() + v2.getX());
-    v.setY(getY() + v2.getY());
-    v.setZ(getZ() + v2.getZ());
-
-    return v;
-}
-
 
 int main() {
     ThreeDPoint p1(10, 10, 10);
