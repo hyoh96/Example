@@ -32,7 +32,7 @@ public:
 
 ThreeDPoint& operator+(ThreeDPoint& v2) {
     ThreeDPoint v;
-    v.setX(this-> getX() + v2.getX());
+    v.setX(getX() + v2.getX());
     v.setY(getY() + v2.getY());
     v.setZ(getZ() + v2.getZ());
 
